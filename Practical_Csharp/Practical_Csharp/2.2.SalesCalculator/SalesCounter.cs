@@ -1,45 +1,44 @@
-﻿using System;
+﻿// List 2-27
+using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Text;
 
-namespace SalesCalculator {
-    class SalesCounter {
-        private List<Sale> _sales;
+    // 매출 계산 클래스
+    public class SalesCounter {
+        private IEnumerable<Sale> _sales;
 
-        public SalesCounter(List<Sale> sales) {
-            _sales = sales;
+        // 생성자
+        public SalesCounter(string filePath) {
+            _sales = ReadSales(filePath);
         }
 
-        // Sales.scv 파일 로드
-        static List<Sale> ReadSales(string filePath) {
-            List<Sale> sales = new List<Sale>();
-
-            string[] lines = File.ReadAllLines(filePath);
+        // 매출 데이터를 읽어들이고 Sale 오브젝트의 리스트를 반환한다
+        private static IEnumerable<Sale> ReadSales(string filePath) {
+            var sales = new List<Sale>();
+            var lines = File.ReadAllLines(filePath);
             foreach (var line in lines) {
-                string[] items = line.Split(',');
-                Sale sale = new Sale {
+                var items = line.Split(',');
+                var sale = new Sale {
                     ShopName = items[0],
                     ProductCategory = items[1],
                     Amount = int.Parse(items[2])
                 };
-
                 sales.Add(sale);
             }
             return sales;
         }
 
-        // 점포별 매출 구하기
-        public Dictionary<string, int> GetPerStoreSales() {
-            Dictionary<string, int> dictionary = new Dictionary<string, int>();
 
+        // List 2-24
+        // 점포별 매출을 구한다
+        public IDictionary<string, int> GetPerStoreSales() {
+            var dictionary = new Dictionary<string, int>();
             foreach (var sale in _sales) {
                 if (dictionary.ContainsKey(sale.ShopName))
-                    dictionary[sale.ShopName] += sale.Amount;
+                dictionary[sale.ShopName] += sale.Amount;
                 else
-                    dictionary[sale.ShopName] -= sale.Amount;
+                dictionary[sale.ShopName] = sale.Amount;
             }
             return dictionary;
         }
     }
-}
