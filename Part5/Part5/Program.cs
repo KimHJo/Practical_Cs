@@ -39,6 +39,15 @@ namespace Part5 {
 
             var str10 = "I hope you could come with us";
             cs.ShowReplaceResult(str10, "hope", "wish");
+
+            cs.ShowSplitResult(str10, ' ');
+
+            cs.ShowSplitOptionResult(str10, ' ', '.');
+
+            var str11 = "둘리";
+            var str12 = "또치";
+
+            cs.ShowFormatResult(str11, str12);
         }
     }
 }

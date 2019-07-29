@@ -87,5 +87,22 @@ namespace Part5 {
             var target = str.Replace(targetText, text);
             Console.WriteLine(target);
         }
+        public void ShowSplitResult(string str, char sp) {
+            Console.WriteLine("---- Show Split Methode Result ----");
+            var target = str.Split(sp);
+            foreach (var c in target)
+                Console.WriteLine(c);
+        }
+        public void ShowSplitOptionResult(string str, char sp, char sp2) {
+            Console.WriteLine("---- Show Split(Option) Methode Result ----");
+            var target = str.Split(sp, sp2, StringSplitOptions.RemoveEmptyEntries);
+            foreach (var c in target)
+                Console.WriteLine(c);
+        }
+        public void ShowFormatResult(params string[] str) {
+            Console.WriteLine("---- Show Format Methode Result ----");
+            var target = String.Format("str1 = {0} , str2 = {1}", str[0], str[1]);
+            Console.WriteLine(target);
+        }
     }
 }
