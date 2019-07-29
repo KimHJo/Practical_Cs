@@ -1,0 +1,11 @@
+C:\Users\hy\Documents\practical_cs\Practical_Csharp\Practical_Csharp\bin\Debug\netcoreapp2.1\Practical_Csharp.deps.json
+C:\Users\hy\Documents\practical_cs\Practical_Csharp\Practical_Csharp\bin\Debug\netcoreapp2.1\Practical_Csharp.runtimeconfig.json
+C:\Users\hy\Documents\practical_cs\Practical_Csharp\Practical_Csharp\bin\Debug\netcoreapp2.1\Practical_Csharp.runtimeconfig.dev.json
+C:\Users\hy\Documents\practical_cs\Practical_Csharp\Practical_Csharp\bin\Debug\netcoreapp2.1\Practical_Csharp.dll
+C:\Users\hy\Documents\practical_cs\Practical_Csharp\Practical_Csharp\bin\Debug\netcoreapp2.1\Practical_Csharp.pdb
+C:\Users\hy\Documents\practical_cs\Practical_Csharp\Practical_Csharp\obj\Debug\netcoreapp2.1\Practical_Csharp.csprojAssemblyReference.cache
+C:\Users\hy\Documents\practical_cs\Practical_Csharp\Practical_Csharp\obj\Debug\netcoreapp2.1\Practical_Csharp.csproj.CoreCompileInputs.cache
+C:\Users\hy\Documents\practical_cs\Practical_Csharp\Practical_Csharp\obj\Debug\netcoreapp2.1\Practical_Csharp.AssemblyInfoInputs.cache
+C:\Users\hy\Documents\practical_cs\Practical_Csharp\Practical_Csharp\obj\Debug\netcoreapp2.1\Practical_Csharp.AssemblyInfo.cs
+C:\Users\hy\Documents\practical_cs\Practical_Csharp\Practical_Csharp\obj\Debug\netcoreapp2.1\Practical_Csharp.dll
+C:\Users\hy\Documents\practical_cs\Practical_Csharp\Practical_Csharp\obj\Debug\netcoreapp2.1\Practical_Csharp.pdb
