@@ -5,7 +5,7 @@ using System.Text;
 namespace Practice_Csharp_Part_3 {
     class _3_list_ramda {
 
-        public void ShowMethodInList() {
+        public void ShowResult() {
             // City list
             var list = new List<string> {
                 "Seoul", "New Delhi", "Bangkok", "London", "Paris", "Canberra", "Hong kong",
