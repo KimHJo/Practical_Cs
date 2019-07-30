@@ -66,9 +66,32 @@ namespace Part6 {
             Console.WriteLine(bookcontain);
 
             //6.4 컬렉션 판정
+            //6.4.1 조건 일치 요소 조사
+            var numbers2 = new List<int> { 19, 17, 15, 24, 12, 25, 15, 20, 11, 30, 24 };
 
+            bool isExists = numbers2.Any(x => x % 7 == 0);
+            Console.WriteLine(isExists);
 
+            //6.4.2 조건 만족 조사
+            var isAllPositive = numbers.All(x => x > 3);
+            Console.WriteLine(isAllPositive);
 
+            //6.4.3 같은 컬렉션 조사
+            var numlist1 = new List<int> { 9, 7, 5, 4, 2, 4, 0, -4, -1, 0, 4 };
+            var numlist2 = new List<int> { 9, 7, 5, 4, 2, 4, 0, -4, -1, 0, 4 };
+
+            var equal = numlist1.SequenceEqual(numlist2);
+            Console.WriteLine(equal);
+
+            //6.5 단일 요소 구하기
+            //6.5.1 조건일치 첫/마지막 요소 구하기
+            var text = "The quick brown fox jumps over the lazy dog";
+            var words = text.Split(' ');
+            var firstWord = words.FirstOrDefault(x => x.Length == 4);
+            var lastWord = words.LastOrDefault(x => x.Length == 4);
+
+            Console.WriteLine(firstWord);
+            Console.WriteLine(lastWord);
 
 
         }
