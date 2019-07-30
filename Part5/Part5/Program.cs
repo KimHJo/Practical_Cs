@@ -5,7 +5,6 @@ namespace Part5 {
         static void Main(string[] args) {
             var cs = new Class_String();
 
-
             cs.ShowCompareResult("Window", "WINDOW");
 
             var str = "Visual Basic C#";
