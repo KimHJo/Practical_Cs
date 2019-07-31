@@ -1,10 +1,40 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
+using System.Collections;
 using System.Linq;
 
 namespace Part7 {
     class Program {
         static void Main(string[] args) {
+            // 연습문제 7.1
+            // Cozy lummox gives smart squid who asks for job pen의 알파벳 문자가 몇 번씩 나타나는지 세는 프로그램 작성
+            // 반드시 딕셔너리 사용
+            var str = "Cozy lummox gives smart squid who asks for job pen";
+
+            var alphabetDict = new Dictionary<char, int>();
+
+            var splitStr = str.Split(' ');
+            int count;
+
+            foreach(var item in splitStr) {
+                count = 0;
+                for(int i = 0; i < 'a'-'z'; i++) {
+                    foreach(var c in item) {
+                        if (item.Contains((char)i))
+                            alphabetDict[(char)i] = count;
+                        else
+                            alphabetDict.Add((char)i, count);
+                    }
+                }
+            }
+
+            foreach (var item in alphabetDict) {
+                Console.WriteLine("'{0}' : {1}", item.Key, item.Value);
+            }
+
+
+            /*
             var flowerDict = new Dictionary<string, int>() {
                 //["sunflower"] = 400,
                 { "pansy", 300 },
@@ -116,7 +146,7 @@ namespace Part7 {
 
             foreach (var item in abbrs.FindAll("국제")) {
                 Console.WriteLine("{0} = {1}", item.Key, item.Value);
-            }
+            }*/
         }
     }
 }
