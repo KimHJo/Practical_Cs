@@ -9,7 +9,7 @@ namespace Part7 {
         private Dictionary<string, string> _dict = new Dictionary<string, string>();
 
         public Abbreviations() {
-            var lines = File.ReadAllLines("Abbreviations.txt");
+            var lines = File.ReadAllLines(@"C:\Users\hy\Documents\practical_cs\Part7\Part7\Abbreviations.txt");
             _dict = lines.Select(line => line.Split('='))
                          .ToDictionary(x => x[0], x => x[1]);
         }
