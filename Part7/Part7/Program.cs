@@ -25,9 +25,10 @@ namespace Part7 {
                     else
                         alphabetDict[upperCh] = 1;
             }
+
             
             // 출력
-            foreach (var item in alphabetDict) {
+            foreach (var item in alphabetDict.OrderBy(x => x.Key)) {
                 Console.WriteLine("'{0}' : {1}", item.Key, item.Value);
             }
 
