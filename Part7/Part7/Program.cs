@@ -17,17 +17,9 @@ namespace Part7 {
             var splitStr = str.Split(' ');
             int count;
 
-            foreach(var item in splitStr) {
-                count = 0;
-                for(int i = 0; i < 'a'-'z'; i++) {
-                    foreach(var c in item) {
-                        if (item.Contains((char)i))
-                            alphabetDict[(char)i] = count;
-                        else
-                            alphabetDict.Add((char)i, count);
-                    }
-                }
-            }
+            //foreach(var sp in splitStr) {
+            //    Console.WriteLine(sp);
+            //}
 
             foreach (var item in alphabetDict) {
                 Console.WriteLine("'{0}' : {1}", item.Key, item.Value);
