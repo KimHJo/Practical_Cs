@@ -12,8 +12,10 @@ namespace Part7 {
             // 반드시 딕셔너리 사용
             var str = "Cozy lummox gives smart squid who asks for job pen";
 
-            var alphabetDict = new Dictionary<char, int>();
+            // var alphabetDict = new Dictionary<char, int>();
 
+            var alphabetDict = new SortedDictionary<char, int>();
+            
             foreach (var ch in str) {
                 // 대문자로 정렬
                 var upperCh = char.ToUpper(ch);
@@ -26,9 +28,8 @@ namespace Part7 {
                         alphabetDict[upperCh] = 1;
             }
 
-            
             // 출력
-            foreach (var item in alphabetDict.OrderBy(x => x.Key)) {
+            foreach (var item in alphabetDict) {
                 Console.WriteLine("'{0}' : {1}", item.Key, item.Value);
             }
 
