@@ -14,13 +14,19 @@ namespace Part7 {
 
             var alphabetDict = new Dictionary<char, int>();
 
-            var splitStr = str.Split(' ');
-            int count;
-
-            //foreach(var sp in splitStr) {
-            //    Console.WriteLine(sp);
-            //}
-
+            foreach (var ch in str) {
+                // 대문자로 정렬
+                var upperCh = char.ToUpper(ch);
+                // 공백 제거 
+                if ('A' <= upperCh && upperCh <= 'Z')
+                    // 딕셔너리에 입력
+                    if (alphabetDict.ContainsKey(upperCh))
+                        alphabetDict[upperCh]++;
+                    else
+                        alphabetDict[upperCh] = 1;
+            }
+            
+            // 출력
             foreach (var item in alphabetDict) {
                 Console.WriteLine("'{0}' : {1}", item.Key, item.Value);
             }
