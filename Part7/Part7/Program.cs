@@ -115,7 +115,7 @@ namespace Part7 {
             Console.WriteLine();
 
             foreach (var item in abbrs.FindAll("국제")) {
-                Console.WriteLine("{0} = {1}", item, item.Value);
+                Console.WriteLine("{0} = {1}", item.Key, item.Value);
             }
         }
     }
