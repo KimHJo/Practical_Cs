@@ -62,11 +62,24 @@ namespace Part7 {
                                           .ToDictionary(flower => flower.Key, flower => flower.Value);
 
             // 사용자 지정 클래스를 키로 이용 
+            var datesDict = new Dictionary<MonthDay, string> {
+                { new MonthDay(6, 6), "현충일" },
+                {new MonthDay(8, 15), "광복절" },
+            };
 
+            var md = new MonthDay(8, 15);
+            var s = datesDict[md];
+            Console.WriteLine(s);
         }
     }
 
     public class MonthDay {
+        public int Day { get; private set; }
+        public int Month { get; private set; }
+        public MonthDay(int month, int day) {
+            this.Month = month;
+            this.Day = day;
+        }
     }
 
     public class Employee {
