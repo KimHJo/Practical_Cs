@@ -91,34 +91,4 @@ namespace Part7 {
             }
         }
     }
-
-    public class MonthDay {
-        public int Day { get; private set; }
-        public int Month { get; private set; }
-        public MonthDay(int month, int day) {
-            this.Month = month;
-            this.Day = day;
-        }
-
-        public override bool Equals(object obj) {
-            var other = obj as MonthDay;
-            if (other == null)
-                throw new ArgumentException();
-            return this.Day == other.Day && this.Month == other.Month;
-        }
-
-        public override int GetHashCode() {
-            return Month.GetHashCode() * 31 + Day.GetHashCode();
-        }
     }
-
-    public class Employee {
-        public int Number { get; set; }
-        public string Name { get; set; }
-
-        public Employee(int number, string name) {
-            this.Number = number;
-            this.Name = name;
-        }
-    }
-}
