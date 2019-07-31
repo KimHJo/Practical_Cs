@@ -80,6 +80,17 @@ namespace Part7 {
             this.Month = month;
             this.Day = day;
         }
+
+        public override bool Equals(object obj) {
+            var other = obj as MonthDay;
+            if (other == null)
+                throw new ArgumentException();
+            return this.Day == other.Day && this.Month == other.Month;
+        }
+
+        public override int GetHashCode() {
+            return Month.GetHashCode() * 31 + Day.GetHashCode();
+        }
     }
 
     public class Employee {
