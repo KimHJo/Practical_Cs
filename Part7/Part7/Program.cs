@@ -70,6 +70,25 @@ namespace Part7 {
             var md = new MonthDay(8, 15);
             var s = datesDict[md];
             Console.WriteLine(s);
+
+            // 키의 중복 문제 허용
+            var sameKeyValueDict = new Dictionary<string, List<string>>() {
+                {"PC", new List<string>{"개인 컴퓨터", "프로그램 카운터", } },
+                {"CD", new List<string>{"컴팩트 디스크", "캐시 디스팬서" } },
+            };
+
+            var ke = "EC";
+            var kv = "전자상거래";
+            if (sameKeyValueDict.ContainsKey(ke))
+                sameKeyValueDict[ke].Add(kv);
+            else
+                sameKeyValueDict[ke] = new List<string> { kv, };
+
+            foreach(var item in sameKeyValueDict) {
+                foreach(var term in item.Value) {
+                    Console.WriteLine("{0} : {1}", item.Key, term);
+                }
+            }
         }
     }
 
